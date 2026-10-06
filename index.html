@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Сторінка викладача</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="container header-inner">
+    <div class="logo">Кафедра ПЗ</div>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    <nav id="menu">
+      <a href="#home">Головна</a>
+      <a href="#courses">Дисципліни</a>
+      <a href="#consultations">Консультації</a>
+      <a href="#science">Наука</a>
+      <a href="#contacts">Контакти</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero container" id="home">
+    <div class="hero-text">
+      <p class="small-title">Персональна сторінка викладача</p>
+      <h1>Віктор Коваленко</h1>
+      <h3>к.т.н., доцент кафедри програмного забезпечення</h3>
+      <p>Викладач кафедри програмного забезпечення. На сторінці можна знайти інформацію про дисципліни, консультації, наукову діяльність та навчальні матеріали.</p>
+      <div class="buttons">
+        <a href="#courses">Мої дисципліни</a>
+        <button class="light" type="button" onclick="demoButton(this)">Написати email</button>
+      </div>
+      <p class="links"><button type="button" onclick="demoButton(this)">GitHub</button> · <button type="button" onclick="demoButton(this)">ORCID</button> · <button type="button" onclick="demoButton(this)">Google Scholar</button></p>
+    </div>
+    <div class="photo">
+      <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=700&q=80" alt="Фото викладача">
+    </div>
+  </section>
+
+  <section class="notice container">
+    <strong>Актуальне оголошення</strong>
+    <p>Захист лабораторних робіт №3 відбудеться до 18 жовтня. Запис на консультацію відкритий.</p>
+  </section>
+
+  <section class="section container" id="courses">
+    <h2>Дисципліни</h2>
+    <div class="cards">
+      <article class="card">
+        <h3>Вебпрограмування</h3>
+        <p>HTML, CSS, JavaScript та створення вебзастосунків.</p>
+        <p><b>Заняття:</b> понеділок, середа</p>
+        <div><button type="button" onclick="demoButton(this)">Силабус</button> <button type="button" onclick="demoButton(this)">GitHub</button> <button type="button" onclick="demoButton(this)">Moodle</button></div>
+      </article>
+      <article class="card">
+        <h3>Об'єктно-орієнтоване програмування</h3>
+        <p>Класи, наслідування, поліморфізм та програмування на C#.</p>
+        <p><b>Заняття:</b> вівторок, четвер</p>
+        <div><button type="button" onclick="demoButton(this)">Силабус</button> <button type="button" onclick="demoButton(this)">GitHub</button> <button type="button" onclick="demoButton(this)">Moodle</button></div>
+      </article>
+      <article class="card">
+        <h3>Алгоритми та структури даних</h3>
+        <p>Основні алгоритми, дерева, графи, пошук та сортування.</p>
+        <p><b>Заняття:</b> понеділок, п'ятниця</p>
+        <div><button type="button" onclick="demoButton(this)">Силабус</button> <button type="button" onclick="demoButton(this)">GitHub</button> <button type="button" onclick="demoButton(this)">Moodle</button></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section gray" id="consultations">
+    <div class="container two-columns">
+      <div>
+        <h2>Консультації</h2>
+        <p>Консультації проводяться в університеті та онлайн.</p>
+        <table>
+          <tr><th>День</th><th>Час</th></tr>
+          <tr><td>Понеділок</td><td>14:00–16:00</td></tr>
+          <tr><td>Середа</td><td>12:00–14:00</td></tr>
+          <tr><td>П'ятниця</td><td>10:00–12:00</td></tr>
+        </table>
+        <p><b>Кабінет:</b> 305</p>
+        <button class="simple-btn" type="button" onclick="demoButton(this)">Google Meet</button>
+      </div>
+      <form onsubmit="return false;">
+        <h3>Запис на консультацію</h3>
+        <label>Ім'я<input type="text" required></label>
+        <label>Тип звернення<select required><option value="">Оберіть...</option><option>Консультація</option><option>Захист лабораторної</option><option>Курсова робота</option></select></label>
+        <label>Повідомлення<textarea rows="4"></textarea></label>
+        <button type="button" onclick="demoForm()">Надіслати</button>
+        <p id="form-message"></p>
+      </form>
+    </div>
+  </section>
+
+  <section class="section container" id="science">
+    <h2>Наукова діяльність</h2>
+    <p>Наукові інтереси: веброзробка, архітектура програмного забезпечення, штучний інтелект та хмарні технології.</p>
+    <div class="science-links">
+      <button type="button" onclick="demoButton(this)">Google Scholar</button>
+      <button type="button" onclick="demoButton(this)">ORCID</button>
+      <button type="button" onclick="demoButton(this)">Scopus</button>
+      <button type="button" onclick="demoButton(this)">GitHub</button>
+    </div>
+    <h3>Публікації та матеріали</h3>
+    <ul class="publications">
+      <li>Сучасна архітектура вебзастосунків — <button type="button" onclick="demoButton(this)">PDF</button></li>
+      <li>Проєктування програмних систем — <button type="button" onclick="demoButton(this)">PDF</button></li>
+      <li>Практикум з JavaScript та React — <button type="button" onclick="demoButton(this)">PDF</button></li>
+    </ul>
+  </section>
+
+  <section class="section gray" id="contacts">
+    <div class="container">
+      <h2>Контакти</h2>
+      <p><b>Email:</b> <button type="button" onclick="demoButton(this)">teacher@university.edu.ua</button></p>
+      <p><b>Telegram:</b> <button type="button" onclick="demoButton(this)">@teacher_it</button></p>
+      <p><b>Кабінет:</b> 305, корпус №2</p>
+      <p><b>Університет:</b> вул. Університетська, 1</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">© 2026 Персональна сторінка викладача</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
